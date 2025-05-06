@@ -5,4 +5,14 @@ class user_model extends CI_Model
     {
         return $this->db->insert('users', $data);
     }
+    public function check_user($username, $password)
+    {
+        $this->db->where('username', $username);
+        $user = $this->db->get('user')->row();
+
+        if ($user && password_verify($password, $user->$password)) {
+            return $user;
+        }
+        return false;
+    }
 }
