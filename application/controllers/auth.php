@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No Direct script access allowed');
 
-class Auth extends CI_Controller
+class auth extends CI_Controller
 {
     public function __construct()
     {
@@ -18,9 +18,6 @@ class Auth extends CI_Controller
     {
         $this->load->view('templates/header');
         $this->load->view('auth/register');
-        $this->load->view('templates/footer');
-
-
         $this->load->view('templates/footer');
     }
 
@@ -66,7 +63,7 @@ class Auth extends CI_Controller
             ]);
             $this->redirect_by_role($user->role);
         } else {
-            $this->session->set_flashdata('error', 'username atau password salah');
+            $this->session->set_flashdata('error', 'Username atau Password salah');
             redirect('auth/login');
         }
     }
