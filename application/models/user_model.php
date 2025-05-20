@@ -1,4 +1,5 @@
 <?php
+
 class user_model extends CI_Model
 {
     public function insert_user($data)
@@ -10,7 +11,7 @@ class user_model extends CI_Model
         $this->db->where('username', $username);
         $user = $this->db->get('user')->row();
 
-        if ($user && password_verify($password, $user->$password)) {
+        if ($user && password_verify($password, $user->password)) {
             return $user;
         }
         return false;
