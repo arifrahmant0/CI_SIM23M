@@ -9,7 +9,7 @@ class user_model extends CI_Model
     public function check_user($username, $password)
     {
         $this->db->where('username', $username);
-        $user = $this->db->get('user')->row();
+        $user = $this->db->get('users')->row();
 
         if ($user && password_verify($password, $user->password)) {
             return $user;
