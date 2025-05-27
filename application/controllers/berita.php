@@ -101,7 +101,7 @@ class Berita extends CI_Controller
         $tanggal_dari = $this->input->post('tanggal_dari');
         $tanggal_sampai = $this->input->post('tanggal_sampai');
 
-        $data['berita'] = $this->Berita_model->get_laporan_berita($tanggal_dari, $tanggal_sampai);
+        $data['berita'] = $this->berita_model->get_laporan_berita($tanggal_dari, $tanggal_sampai);
         $data['tanggal_dari'] = $tanggal_dari;
         $data['tanggal_sampai'] = $tanggal_sampai;
 
