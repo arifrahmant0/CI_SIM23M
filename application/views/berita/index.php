@@ -69,7 +69,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-                <p>&copy; 2025 Arif News. All rights reserved.</p>
+
             </div>
             <!-- /.card-footer-->
         </div>
